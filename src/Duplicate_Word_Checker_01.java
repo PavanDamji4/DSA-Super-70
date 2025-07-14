@@ -23,10 +23,10 @@ public class Duplicate_Word_Checker_01 {
         HashSet <String> hs = new HashSet<>(); // using HashSet cause it does not allow duplicate value
         for (int i=0;i<words.length;i++)
         {
-            if ((hs.contains(words[i].toLowerCase()))){  //Checking if the word already exists in HashSet
+            if ((hs.contains(words[i]))){  //Checking if the word already exists in HashSet
                 return true;
             }
-            hs.add(words[i]);  // automatically ignores this line...if the element already exist in HashSetk
+            hs.add(words[i].toLowerCase());  // automatically ignores this line...if the element already exist in HashSetk
         }
         return false;
     }
